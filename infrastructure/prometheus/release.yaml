@@ -21,6 +21,10 @@ spec:
       persistentVolume:
         storageClass: "ebs-sc"
     server:
+      ingress:
+        enabled: true
+        hosts: 
+           - prometheus.dev 
       persistentVolume:
         storageClass: "ebs-sc"
     pushgateway:

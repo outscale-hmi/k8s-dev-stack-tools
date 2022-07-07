@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cloud-provider-osc-tools
+spec:
+  releaseName: cloud-provider-osc
+  chart:
+    spec:
+      chart: deploy/k8s-osc-ccm
+      sourceRef:
+        kind: GitRepository
+        name: cloud-provider-osc
+        namespace: flux-system
+      version: "0.0.3"
+  interval: 15s
+  install:
+    remediation:
+      retries: 4
+  values:
+    oscSecretName: osc-secret
+    image:
+      repository: outscale/cloud-provider-osc
+      tag: v0.0.10beta

@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: osc-bsu-csi-driver
+spec:
+  releaseName: osc-bsu-csi-driver
+  chart:
+    spec:
+      chart: osc-bsu-csi-driver
+      sourceRef:
+        kind: GitRepository
+        name: osc-bsu-csi-driver
+        namespace: flux-system
+      version: "0.7.0"
+  interval: 15s
+  install:
+    remediation:
+      retries: 4
+  values:
+    enableVolumeScheduling: true
+    enableVolumeResizing: true
+    enableVolumeSnapshot: true
+    region: eu-west-2    

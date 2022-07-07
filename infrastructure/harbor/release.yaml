@@ -17,6 +17,11 @@ spec:
     remediation:
       retries: 3
   values:
+    expose:
+      ingress:
+        hosts:
+          core: core.harbor.dev
+          notary: notary.harbor.dev
     persistence:
       enable: true
       persistentVolumeClaim:

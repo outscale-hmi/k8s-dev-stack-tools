@@ -5,3 +5,5 @@ resources:
   - harbor.yaml
   - prometheus.yaml
   - grafana.yaml
+  - osc-bsu-csi-driver.yaml 
+  - cloud-provider-osc.yaml

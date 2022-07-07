@@ -5,3 +5,5 @@ resources:
   - harbor
   - prometheus
   - grafana 
+  - osc-bsu-csi-driver
+  - cloud-provider-osc
