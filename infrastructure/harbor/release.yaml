@@ -20,8 +20,13 @@ spec:
     expose:
       ingress:
         hosts:
-          core: core.harbor.dev
-          notary: notary.harbor.dev
+          core: core.harbor-dev.171-33-124-68.sslip.io
+          notary: notary.harbor-dev.171-33-124-68.sslip.io
+        annotations:
+          kubernetes.io/ingress.class: nginx
+          cert-manager.io/cluster-issuer: letsencrypt-staging
+          acme.cert-manager.io/http01-edit-in-place: "true"
+    externalURL: https://core.harbor-dev.171-33-124-68.sslip.io
     persistence:
       enable: true
       persistentVolumeClaim:

@@ -7,3 +7,4 @@ resources:
   - grafana.yaml
   - osc-bsu-csi-driver.yaml 
   - cloud-provider-osc.yaml
+  - cert-manager.yaml

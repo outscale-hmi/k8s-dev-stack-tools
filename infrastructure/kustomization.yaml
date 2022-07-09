@@ -4,6 +4,6 @@ resources:
   - sources
   - harbor
   - prometheus
-  - grafana 
   - osc-bsu-csi-driver
   - cloud-provider-osc
+  - cert-manager
