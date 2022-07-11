@@ -12,10 +12,10 @@ spec:
         name: cloud-provider-osc
         namespace: flux-system
       version: "0.0.3"
-  interval: 15s
+  interval: 60s
   install:
     remediation:
-      retries: 4
+      retries: 30
   values:
     oscSecretName: osc-secret
     image:

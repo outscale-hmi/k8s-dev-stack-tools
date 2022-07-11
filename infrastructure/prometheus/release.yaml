@@ -15,7 +15,7 @@ spec:
   interval: 30s
   install:
     remediation:
-      retries: 5 
+      retries: 6
   values:
     grafana:
       admin:
@@ -27,13 +27,13 @@ spec:
         tls:
           - secretName: grafana-tls
             hosts:
-              - grafana-dev.171-33-124-68.sslip.io
+              - grafana-dev.80-247-6-227.sslip.io
         annotations:
           kubernetes.io/ingress.class: nginx
           cert-manager.io/cluster-issuer: letsencrypt-staging
           acme.cert-manager.io/http01-edit-in-place: "true"
         hosts:
-          - grafana-dev.171-33-124-68.sslip.io
+          - grafana-dev.80-247-6-227.sslip.io
     prometheusOperator:
       prometheusSpec:
         storageSpec: 
