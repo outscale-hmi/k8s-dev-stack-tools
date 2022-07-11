@@ -15,7 +15,7 @@ spec:
   interval: 30s
   install:
     remediation:
-      retries: 3
+      retries: 5
   values:
     expose:
       ingress:
