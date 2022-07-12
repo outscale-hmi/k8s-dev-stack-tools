@@ -19,8 +19,10 @@ spec:
   values:
     expose:
       tls:
+        certSource: secret
         secret:
           notarySecretName: "notary-harbor-ingress"
+          secretName: "core-harbor-ingress"
       ingress:
         hosts:
           core: core.harbor-dev.142-44-33-69.sslip.io
