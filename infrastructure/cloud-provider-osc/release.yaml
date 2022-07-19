@@ -15,7 +15,7 @@ spec:
   interval: 60s
   install:
     remediation:
-      retries: 30
+      retries: 60
   values:
     oscSecretName: osc-secret
     image:

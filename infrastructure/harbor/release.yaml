@@ -25,13 +25,13 @@ spec:
           secretName: "core-harbor-ingress"
       ingress:
         hosts:
-          core: core.harbor-dev.142-44-33-69.sslip.io
-          notary: notary.harbor-dev.142-44-33-69.sslip.io
+          core: core.harbor-dev.80-247-5-219.sslip.io
+          notary: notary.harbor-dev.80-247-5-219.sslip.io
         annotations:
           kubernetes.io/ingress.class: nginx
           cert-manager.io/cluster-issuer: letsencrypt-staging
           acme.cert-manager.io/http01-edit-in-place: "true"
-    externalURL: https://core.harbor-dev.142-44-33-69.sslip.io
+    externalURL: https://core.harbor-dev.80-247-5-219.sslip.io
     updateStrategy:
       type: Recreate
     persistence:
