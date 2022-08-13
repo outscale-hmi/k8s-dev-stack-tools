@@ -39,6 +39,7 @@ spec:
       persistentVolumeClaim:
         registry:
           storageClass: "ebs-sc"  
+          size: 20Gi
         chartmuseum: 
           storageClass: "ebs-sc"
         jobservice:
