@@ -8,3 +8,5 @@ resources:
   - osc-bsu-csi-driver.yaml 
   - cloud-provider-osc.yaml
   - cert-manager.yaml
+  - jaeger.yaml
+  - opentelemetry.yaml 

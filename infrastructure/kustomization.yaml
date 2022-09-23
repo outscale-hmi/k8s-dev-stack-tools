@@ -7,3 +7,5 @@ resources:
   - osc-bsu-csi-driver
   - cloud-provider-osc
   - cert-manager
+  - jaeger
+  - opentelemetry
