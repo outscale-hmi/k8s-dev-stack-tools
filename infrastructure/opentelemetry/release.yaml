@@ -6,7 +6,7 @@ spec:
   releaseName: open-telemetry
   chart:
     spec:
-      chart: open-telemetry
+      chart: opentelemetry-collector
       sourceRef:
         kind: HelmRepository
         name: open-telemetry 
