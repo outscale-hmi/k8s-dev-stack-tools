@@ -27,8 +27,9 @@ spec:
         existingSecret: elasticsearch-master-credentials
         existingSecretKey: password
     elasticsearch:
-      secret:
-        enabled: true
+      envFrom: 
+        - secretRef:
+            name: elasticsearch-master-credentials
       volumeClaimTemplate:
         storageClassName: "ebs-sc"        
         resources:
