@@ -17,8 +17,7 @@ spec:
     remediation:
       retries: 6
   values:
-    mode: "daemonset" 
-
+    mode: "statefulset" 
     config:
       receivers:
         jaeger:
