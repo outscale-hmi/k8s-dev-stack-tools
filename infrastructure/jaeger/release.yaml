@@ -21,13 +21,13 @@ spec:
       cassandra: false
       elasticsearch: true
       kafka: false
+    storage:
+      type: elasticsearch
+      elasticsearch:
+        existingSecret: elasticsearch-master-credentials
+        existingSecretKey: password
     elasticsearch:
       name: elasticsearch-master-credentials
-      storage:
-        type: elasticsearch
-        elasticsearch:
-          existingSecret: elasticsearch-master-credentials
-          existingSecretKey: password
       volumeClaimTemplate:
         storageClassName: "ebs-sc"        
         resources:
