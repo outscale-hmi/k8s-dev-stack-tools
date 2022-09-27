@@ -18,6 +18,7 @@ spec:
       retries: 6
   values:
     provisionDataStore:
+      cassandra: false
       elasticsearch: true
       kafka: false
     elasticsearch:
