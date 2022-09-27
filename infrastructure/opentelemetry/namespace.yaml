@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: default
+  name: cluster-api-provider-outscale-system  
