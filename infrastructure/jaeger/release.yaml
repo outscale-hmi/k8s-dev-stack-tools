@@ -19,19 +19,13 @@ spec:
   values:
     provisionDataStore:
       cassandra: false
-      elasticsearch: true
-      kafka: false
+    allInOne:
+      enabled: true
     storage:
-      type: elasticsearch
-      elasticsearch:
-        existingSecret: elasticsearch-master-credentials
-        existingSecretKey: password
-    elasticsearch:
-      envFrom: 
-        - secretRef:
-            name: elasticsearch-master-credentials
-      volumeClaimTemplate:
-        storageClassName: "ebs-sc"        
-        resources:
-          requests:
-            storage: 30Gi        
+      type: none
+    agent:
+      enabled: false
+    collector:
+      enabled: false
+    query:
+      enabled: false
