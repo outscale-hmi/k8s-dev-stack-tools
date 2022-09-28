@@ -4,3 +4,4 @@ namespace: cluster-api-provider-outscale-system
 resources:
   - namespace.yaml
   - release.yaml
+  - svc.yaml

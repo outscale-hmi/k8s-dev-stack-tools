@@ -1,4 +1,0 @@
-kind: Kustomization
-namespace: cluster-api-provider-outscale-system  
-resources:
-  - release.yaml
