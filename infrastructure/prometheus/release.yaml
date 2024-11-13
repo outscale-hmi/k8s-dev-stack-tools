@@ -30,12 +30,13 @@ spec:
               - grafana-dev.148-253-89-171.sslip.io
         annotations:
           kubernetes.io/ingress.class: nginx
-          cert-manager.io/cluster-issuer: letsencrypt-staging
           acme.cert-manager.io/http01-edit-in-place: "true"
+          cert-manager.io/cluster-issuer: letsencrypt-staging
         hosts:
           - grafana-dev.148-253-89-17.sslip.io
     prometheusOperator:
       prometheusSpec:
+        retention: 7d
         storageSpec: 
           volumeClaimTemplate:
             spec:
@@ -43,4 +44,16 @@ spec:
               accessModes: ["ReadWriteOnce"]
               resources:
                 requests:
-                  storage: 50Gi       
+                  storage: 10Gi
+        logLevel: debug  # Increase log verbosity for development
+    alertmanager:
+      config:
+        global:
+          resolve_timeout: 5m
+        route:
+          receiver: "test-alerts"
+        receivers:
+          - name: "test-alerts"
+            slack_configs:
+              - api_url: "<slack-webhook-url>"
+                channel: "#test-alerts"
