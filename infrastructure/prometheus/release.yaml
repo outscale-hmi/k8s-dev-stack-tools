@@ -45,3 +45,15 @@ spec:
               resources:
                 requests:
                   storage: 10Gi
+        logLevel: debug  # Increase log verbosity for development
+    alertmanager:
+      config:
+        global:
+          resolve_timeout: 5m
+        route:
+          receiver: "test-alerts"
+        receivers:
+          - name: "test-alerts"
+            slack_configs:
+              - api_url: "<slack-webhook-url>"
+                channel: "#test-alerts"
